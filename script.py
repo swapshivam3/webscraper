@@ -25,7 +25,7 @@ pattern='-CV-\d+\d+\d+'                        #filtering out other results, als
 while(1):
     for link in soup.find_all('a'):      
         if(re.search(pattern, link.get('href')) and link.find('img')):                     #getting hyperlinks, and checking if image to avoid repitition
-            if(i>=10):
+            if(i>=100):
                 break
             else:
                 name=Degree=CareerTitle=Membership=Skills=Goal=Certification="N/A"
@@ -53,7 +53,7 @@ while(1):
                 datas.append([i,Name, Degree, CareerTitle, Skills, Goal, Membership, Certification])                 #appending data
 
 
-    if(i>=10):
+    if(i>=100):
         break
     attach+=1
     hURL=cURL+str(attach)                                                  #after one page is done, going to the next page and looped with while
