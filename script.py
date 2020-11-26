@@ -28,7 +28,7 @@ while(1):
             if(i>=100):
                 break
             else:
-                name=Degree=CareerTitle=Membership=Skills=Goal=Certification="N/A"
+                Name=Degree=CareerTitle=Membership=Skills=Goal=Certification="N/A"
                 pURL=link.get('href')
                 fURL=dURL+pURL;                                                                              #pURL only gives relative, so making fURL (full)
                 page=requests.get(fURL)
